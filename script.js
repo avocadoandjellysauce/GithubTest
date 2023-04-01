@@ -28,7 +28,7 @@ var score = 0;
 function validWord(event) {
   event.preventDefault();
   let guess = document.getElementById("prompt").value.toLowerCase();
-  errorBox.innerHTML = "";
+  errorBox.innerHTML = "\n";
   if (splittedWords.includes(guess) && i != 0) {
     if (guess.charAt(0) == init && guess.charAt(guess.length - 1) == fin ) {
       score += 5;
@@ -50,8 +50,8 @@ function validWord(event) {
 
 function gameOver() {
   form.setAttribute("hidden","");
-  scoreCounter.innerHTML = "";
-  errorBox.innerHTML = "";
+  scoreCounter.innerHTML = "\n";
+  errorBox.innerHTML = "\n";
   clue.innerHTML = "Your final score is " + score;
   score = 0;
   const retry = document.createElement("button");
