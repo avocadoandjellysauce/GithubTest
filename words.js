@@ -113807,5 +113807,5 @@ zymosis
 zymotic
 zymurgies
 zymurgy`
-lines.toUppercase();
+lines.toUpperCase();
 const splittedWords = lines.split('\n')
