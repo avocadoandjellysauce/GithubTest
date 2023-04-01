@@ -113808,4 +113808,4 @@ zymotic
 zymurgies
 zymurgy`
 lines.toUpperCase();
-const splittedWords = lines.split('\n')
+const splittedWords = lines.split('\n');
