@@ -1,7 +1,3 @@
-// Word library 
-    
-const words = ["HELLO","HALLO","WORLD","WELD"];
-    
 // Generate random word
 
 var rw = "";
@@ -27,7 +23,7 @@ var score = 0;
 function validWord(event) {
   event.preventDefault();
   let guess = document.getElementById("prompt").value.toUpperCase();
-  if (words.includes(guess) && guess.charAt(0) == init && guess.charAt(guess.length - 1) == fin && i != 0) {
+  if (splittedWords.includes(guess) && guess.charAt(0) == init && guess.charAt(guess.length - 1) == fin && i != 0) {
     score++;
     randWord();
   }
