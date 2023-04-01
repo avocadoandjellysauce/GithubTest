@@ -50,7 +50,7 @@ function validWord(event) {
 
 function gameOver() {
   form.setAttribute("hidden","");
-  scoreCounter.innerHTML = "\n";
+  scoreCounter.innerHTML = "Your score: 0";
   errorBox.innerHTML = "\n";
   clue.innerHTML = "Your final score is " + score;
   score = 0;
