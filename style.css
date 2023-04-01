@@ -24,10 +24,11 @@
 .input_box{
     height:50px;
     font-size:15pt;
+    padding: 7px;
 }
 .yourword{
     font-size: 15pt;
 }
 .id2{
-    border-style: groove;
+    font-size: 60px;
 }
