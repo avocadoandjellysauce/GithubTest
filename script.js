@@ -10,7 +10,7 @@ var fin = "";
 const clue = document.getElementById("2");
 
 function randWord() {
-  rw = splittedWords[Math.floor(Math.random() * words.length)];
+  rw = splittedWords[Math.floor(Math.random() * splittedWords.length)];
   init = rw.charAt(0);
   fin = rw.charAt(rw.length - 1);
   clue.innerHTML = init + fin;
