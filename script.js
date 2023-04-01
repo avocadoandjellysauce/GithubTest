@@ -57,6 +57,7 @@ function gameOver() {
   const retry = document.createElement("button");
   retry.innerHTML = "Retry?";
   retry.setAttribute("onclick", "reinit();");
+  retry.setAttribute("class","button");
   retry.setAttribute("id", "3");
   document.getElementById("gameBox").appendChild(retry);
 }
