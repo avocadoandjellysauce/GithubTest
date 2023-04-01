@@ -50,7 +50,7 @@ function validWord(event) {
 
 function gameOver() {
   form.setAttribute("hidden","");
-  scoreCounter.innerHTML = "Your score: 0";
+  scoreCounter.innerHTML = "\n";
   errorBox.innerHTML = "\n";
   clue.innerHTML = "Your final score is " + score;
   score = 0;
@@ -66,6 +66,7 @@ function gameOver() {
 
 function reinit() {
   form.removeAttribute("hidden");
+  scoreCounter.innerHTML = "Your score: 0";
   document.getElementById("3").remove();
   randWord();
   timer.innerHTML = startingTime;
