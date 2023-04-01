@@ -20,7 +20,7 @@ randWord();
 
 // Checks whether the inputed word is valid
 // i.e. it is in the library and starts and ends with the same letters as rw (case insensitive)
-// If valid, increase score by 1
+// If valid, increase score by 1 and time by 3 s
 
 var score = 0;
 
@@ -30,6 +30,7 @@ function validWord(event) {
   if (words.includes(guess) && guess.charAt(0) == init && guess.charAt(guess.length - 1) == fin && i != 0) {
     score++;
     randWord();
+    i += 3;
   }
 }
 
