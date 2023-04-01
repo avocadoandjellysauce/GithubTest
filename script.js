@@ -73,7 +73,7 @@ function startTimer(){
     }
 
     else document.getElementById("1").innerHTML = i;
-  }, 100);
+  }, 1000);
 }
 
 // Initialize: run the functions
