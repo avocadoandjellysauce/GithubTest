@@ -20,7 +20,7 @@ randWord();
 
 // Checks whether the inputed word is valid
 // i.e. it is in the library and starts and ends with the same letters as rw (case insensitive)
-// If valid, increase score by 1
+// If valid, increase score by 1 and time by 3 s
 
 var score = 0;
 
@@ -30,6 +30,7 @@ function validWord(event) {
   if (words.includes(guess) && guess.charAt(0) == init && guess.charAt(guess.length - 1) == fin && i != 0) {
     score++;
     randWord();
+    i += 3;
   }
 }
 
@@ -53,8 +54,8 @@ function reinit() {
   form.removeAttribute("hidden");
   document.getElementById("3").remove();
   randWord();
-  timer.innerHTML = 10;
-  i = 10;
+  timer.innerHTML = startingTime;
+  i = start;
   startTimer();
 }
 
@@ -62,9 +63,11 @@ function reinit() {
 
 const timer = document.getElementById("1");
 
-var i = 10;
+var startingTime = 30;
+var i = 0;
 
 function startTimer(){
+  i = startingTime;
   const interval = setInterval(function() {
     i--;
 
