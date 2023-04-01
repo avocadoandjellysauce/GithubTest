@@ -1,4 +1,4 @@
-aa
+const lines = `aa
 aah
 aahed
 aahing
@@ -113806,4 +113806,5 @@ zymoses
 zymosis
 zymotic
 zymurgies
-zymurgy
+zymurgy`
+const splittedWords = words.split('\n')
