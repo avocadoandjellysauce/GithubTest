@@ -39,7 +39,7 @@ function gameOver() {
   retry.innerHTML = "Retry?";
   retry.setAttribute("onclick", "reinit();");
   retry.setAttribute("id", "3");
-  document.body.appendChild(retry);
+  document.getElementById("gameBox").appendChild(retry);
 }
 
 // Function that rests the game
