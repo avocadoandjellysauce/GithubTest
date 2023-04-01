@@ -36,11 +36,11 @@ function validWord(event) {
       randWord();
     }
     else {
-      errorBox.innerHTML = "The word doesn't match the letters!"
+      errorBox.innerHTML = "The word doesn't match the letters!";
     }
   }
   else {
-    errorBox.innerHTML = "This isn't a valid word!"
+    errorBox.innerHTML = "This isn't a valid word!";
   }
   form.reset();
 }
