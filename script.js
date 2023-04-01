@@ -26,6 +26,7 @@ function validWord(event) {
     i += 3;
     randWord();
   }
+  form.reset();
 }
 
 // Game over screen
@@ -71,7 +72,7 @@ function startTimer(){
     }
 
     else document.getElementById("1").innerHTML = i;
-  }, 1000);
+  }, 100);
 }
 
 // Initialize: run the functions
