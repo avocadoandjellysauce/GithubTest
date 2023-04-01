@@ -14,7 +14,7 @@ function randWord() {
 
 // Checks whether the inputed word is valid
 // i.e. it is in the library and starts and ends with the same letters as rw (case insensitive)
-// If valid, increase score by 1 and time by 3 s
+// If valid, increase score by 5 and time by 3 s
 
 var score = 0;
 
@@ -22,7 +22,7 @@ function validWord(event) {
   event.preventDefault();
   let guess = document.getElementById("prompt").value.toLowerCase();
   if (splittedWords.includes(guess) && guess.charAt(0) == init && guess.charAt(guess.length - 1) == fin && i != 0) {
-    score++;
+    score += 5;
     i += 3;
     randWord();
   }
@@ -36,6 +36,7 @@ const form = document.getElementById("box");
 function gameOver() {
   form.setAttribute("hidden","");
   clue.innerHTML = "Your final score is " + score;
+  score = 0;
   const retry = document.createElement("button");
   retry.innerHTML = "Retry?";
   retry.setAttribute("onclick", "reinit();");
@@ -72,7 +73,7 @@ function startTimer(){
     }
 
     else document.getElementById("1").innerHTML = i;
-  }, 100);
+  }, 1000);
 }
 
 // Initialize: run the functions
