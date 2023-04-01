@@ -12,8 +12,6 @@ function randWord() {
   clue.innerHTML = init.toUpperCase() + fin.toUpperCase();
 }
 
-randWord();
-
 // Checks whether the inputed word is valid
 // i.e. it is in the library and starts and ends with the same letters as rw (case insensitive)
 // If valid, increase score by 1
@@ -74,4 +72,7 @@ function startTimer(){
   }, 1000);
 }
 
+// Initialize: run the functions
+
+randWord();
 startTimer();
