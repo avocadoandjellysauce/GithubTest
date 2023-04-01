@@ -12,36 +12,77 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
   <style>
+  html{
+    scroll-behavior: smooth;
+
+  }
    .background-image {
         background-image: url('./images/vocab\ velocity.jpg');
-        width: 1920px;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        width: 100%;
         height: 1080px;
-        }
+        /* padding: 50px; */
         
+        }
+
+  .main-body-holder{
+    background-image: url("./images/bggg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    height: 100vh;
+  }
+
+  .main-body{
+    top: 30vh;
+    position: relative;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    background-color: white;
+  }
+    
+    
+
   </style>
 </head>
+<!-- <body background="./images/bggg.jpg"> -->
 <body>
-   <div class="background-image"> </div>
-   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+   <a href="#1st"><div class="background-image"> </div></a>
+   <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
 
-  <div class="main-body" id="gameBox">
-  <h1>Vocab Velocity</h1>
-  <div id="test"></div>
-  <h2 id="1">
-      30
-    </h2>
-    <p id="2">
-    </p>
-    <form id="box">
-      <label for="userInput">Your word:</label>
-      <input type="text" id="prompt" name="userInput">
-      <button onclick="validWord(event)">Submit</button>
-    </form>
+
+  <div id="1st" class="main-body-holder">
+    <div class="main-body" id="gameBox">
+      <h1>Vocab Velocity</h1>
+      <div id="test"></div>
+      <h2 id="1">
+          30
+        </h2>
+        <p id="2">
+        </p>
+        <form class="main-body-form" id="box">
+          <label for="userInput">Your word:</label>
+          <input type="text" id="prompt" name="userInput">
+          <button onclick="validWord(event)">Submit</button>
+        </form>
+      </div>
   </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
 <script src="words.js"></script>
   <script src="script.js">
    
   </script>
+<!-- 
+  <script>
+    function custom_scroll(){
+      console.log("calling custom_scroll()")
+
+      document.getElementById("1st").scrollIntoView();
+    }
+  </script> -->
 </body>
 </html>
