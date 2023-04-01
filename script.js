@@ -52,7 +52,8 @@ function gameOver() {
   form.setAttribute("hidden","");
   scoreCounter.innerHTML = "\n";
   errorBox.innerHTML = "\n";
-  clue.innerHTML = "Your final score is " + score;
+  timer.innerHTML = "Your final score is " + score;
+  clue.innerHTML = "\n";
   score = 0;
   const retry = document.createElement("button");
   retry.innerHTML = "Retry?";
