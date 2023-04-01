@@ -1,9 +1,16 @@
+// List of elements to modify
+
+const timer = document.getElementById("1");
+const clue = document.getElementById("2");
+const form = document.getElementById("box");
+const scoreCounter = document.getElementById("scoreCounter");
+const errorBox = document.getElementById("errorBox");
+
 // Generate random word
 
 var rw = "";
 var init = "";
 var fin = "";
-const clue = document.getElementById("2");
 
 function randWord() {
   rw = splittedWords[Math.floor(Math.random() * splittedWords.length)];
@@ -21,17 +28,24 @@ var score = 0;
 function validWord(event) {
   event.preventDefault();
   let guess = document.getElementById("prompt").value.toLowerCase();
-  if (splittedWords.includes(guess) && guess.charAt(0) == init && guess.charAt(guess.length - 1) == fin && i != 0) {
-    score += 5;
-    i += 3;
-    randWord();
+  if (splittedWords.includes(guess) && i != 0) {
+    if (guess.charAt(0) == init && guess.charAt(guess.length - 1) == fin ) {
+      score += 5;
+      scoreCounter.innerHTML = "Your score: " + score;
+      i += 3;
+      randWord();
+    }
+    else {
+      errorBox.innerHTML = "The word doesn't match the letters!"
+    }
+  }
+  else {
+    errorBox.innerHTML = "This isn't a valid word!"
   }
   form.reset();
 }
 
 // Game over screen
-
-const form = document.getElementById("box");
 
 function gameOver() {
   form.setAttribute("hidden","");
@@ -56,8 +70,6 @@ function reinit() {
 }
 
 // Counts down to 0
-
-const timer = document.getElementById("1");
 
 var startingTime = 30;
 var i = startingTime;
