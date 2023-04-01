@@ -1,11 +1,12 @@
 *{
-    margin: 0;
-    padding: 0;
+    /* margin: 0; */
+    /* padding-right: 50px; */
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    
 }
-.main-body{
-    margin: auto;
-    width: 50%;
-    padding: 10px;
+.body{
+    /* margin: 50px; */
+    /* scroll-behavior: smooth; */
 }
+
