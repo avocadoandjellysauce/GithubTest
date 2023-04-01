@@ -9,7 +9,7 @@ function randWord() {
   rw = splittedWords[Math.floor(Math.random() * splittedWords.length)];
   init = rw.charAt(0);
   fin = rw.charAt(rw.length - 1);
-  clue.innerHTML = init + fin;
+  clue.innerHTML = init.toUpperCase() + fin.toUpperCase();
 }
 
 randWord();
@@ -22,7 +22,7 @@ var score = 0;
 
 function validWord(event) {
   event.preventDefault();
-  let guess = document.getElementById("prompt").value.toUpperCase();
+  let guess = document.getElementById("prompt").value.toLowerCase();
   if (splittedWords.includes(guess) && guess.charAt(0) == init && guess.charAt(guess.length - 1) == fin && i != 0) {
     score++;
     randWord();
