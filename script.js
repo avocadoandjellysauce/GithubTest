@@ -54,8 +54,8 @@ function reinit() {
   form.removeAttribute("hidden");
   document.getElementById("3").remove();
   randWord();
-  timer.innerHTML = 10;
-  i = 10;
+  timer.innerHTML = startingTime;
+  i = start;
   startTimer();
 }
 
@@ -63,9 +63,11 @@ function reinit() {
 
 const timer = document.getElementById("1");
 
-var i = 10;
+var startingTime = 30;
+var i = 0;
 
 function startTimer(){
+  i = startingTime;
   const interval = setInterval(function() {
     i--;
 
