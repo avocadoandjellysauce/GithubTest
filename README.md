@@ -1,1 +1,1 @@
-Try the game: https://avocadoandjellysauce.github.io/VocabVelocity/
+Try the game: https://y-c-shen.github.io/VocabVelocity/
